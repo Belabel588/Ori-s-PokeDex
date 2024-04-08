@@ -33,6 +33,11 @@ body {
 
 }
 
+.fetch-pokemon-btn {
+  width: 10em;
+  font-size: 1.2em;
+}
+
 input {
   background-color: rgb(255, 255, 255);
 }
