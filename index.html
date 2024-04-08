@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ori's Pokedex</title>
+
+  <link rel="stylesheet" href="styles/Pokedex-styles.css">
+</head>
+
+<body>
+
+  <!--! HEADER AND SEARCH SECTION  -->
+  <section class="pokemon-search">
+
+    <h1 class="pokedex-header">Ori's Pokedex</h1>
+    <div class="pokemon-input">
+      <input type="text" id="pokemonName" placeholder="Enter Pokemon name">
+      <button onclick="onGetPokemon()"> Fetch Pokemon</button> <br>
+    </div>
+  </section>
+
+
+  <!--! POKEMON INFO SECTION  -->
+  <section class="pokemon-in-pokedex">
+    <img src="" alt="Pokemon Sprite" id="pokemonSprite" style="display:none">
+  </section>
+
+
+
+
+  <script src="https://unpkg.com/axios@1.6.7/dist/axios.min.js">
+  </script>
+  <script src="js/services/pokedex.service.js"></script>
+  <script src="js/pokedex.controller.js"></script>
+</body>
+
+</html>
