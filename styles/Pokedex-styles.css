@@ -5,7 +5,8 @@
 body {
   margin: 0 auto;
   width: 100vw;
-  background-image: url(../imgs/pokemon-cartoon-minimalist-pokeball-wallpaper-thumb.jpg);
+  background-image: url(../imgs/desktop-wallpaper-rotom-pokedex-background.jpg);
+  background-size: 100vw;
 }
 
 
@@ -24,13 +25,21 @@ body {
 }
 
 input {
-  background-color: rgba(2, 145, 161, 0.813);
+  background-color: rgb(255, 255, 255);
 }
 
 h1 {
   text-align: center;
-  color: rgb(1, 152, 168);
+  color: rgb(0, 0, 0);
+
 }
+
+.pokedex-header {
+  display: flex;
+  flex-direction: column;
+}
+
+
 
 ::placeholder {
   color: white;
@@ -41,17 +50,48 @@ input {
 }
 
 button {
-  background-color: rgba(7, 190, 87, 0.828);
+  background-color: rgb(7, 190, 86);
 }
 
 img {
-  width: 100px;
-  height: 100px;
+  justify-self: center;
+  align-self: center;
+  margin-top: 7em;
+  padding: 0.1em;
+
+}
+
+.pxdx-logo {
+  width: 4em;
 }
 
 .pokemon-in-pokedex {
   display: flex;
+  flex-direction: column;
   align-content: center;
   justify-content: center;
+  margin: 0 auto;
 
+
+
+  margin-top: 4em;
+  border: 2px solid rgb(36, 36, 36);
+
+  background-image: url(../imgs/wp8813113.webp);
+  background-size: 24em;
+  width: 20%;
+  height: fit-content;
+
+}
+
+.pokemon-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 0 auto;
+  padding: 1em;
+  gap: 1em;
+}
+
+p {
+  color: white;
 }
