@@ -10,14 +10,21 @@ function getPokemon(pokemon) {
       elImg.src = elPokemonSprite
       elImg.style.display = 'block'
     })
-    .catch(error => console.error(error))
+    .catch(error => {
+
+      alert('There is no such Pokemon!')
+      const elLoader = document.querySelector('.loader')
+      elLoader.classList.add('hidden')
+
+
+    })
 }
 
 function getPokemonInfo(pokemon) {
   axios.get(`https://pokeapi.co/api/v2/pokemon/${pokemon}`)
 
     .then(response => {
-      const elPokedex = document.querySelector('.pokemon-in-pokedex')
+
       const elPokemonName = document.querySelector('.pokemon-name')
       const elPokemonId = document.querySelector('.pokemon-id')
       const elPokemonType = document.querySelector('.pokemon-type')
@@ -27,11 +34,11 @@ function getPokemonInfo(pokemon) {
 
       elPokemonName.innerText = response.data.name
       elPokemonId.innerText = '#' + response.data.id
-      elPokemonType.innerText = response.data.types[0].type.name
-      elPokemonAbilities.innerText = response.data.abilities[0].ability.name
+      elPokemonType.innerText = response.data.types.map(type => type.type.name).join(', ')
+      elPokemonAbilities.innerText = response.data.abilities.map(ability => ability.ability.name).join(', ')
       elPokemonHeight.innerText = response.data.height
       elPokemonWeight.innerText = response.data.weight
-      elPokedex.style.display = 'block'
+
 
 
     })

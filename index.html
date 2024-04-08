@@ -15,7 +15,7 @@
   <section class="pokemon-search">
     <div class="pokedex-header">
       <img src="imgs/Main1.webp" class="pxdx-logo">
-      <h1 class="pokedex-header">Ori's Pokedex</h1>
+      <!-- <h1 class="pokedex-header">Ori's Pokedex</h1> -->
     </div>
     <div class="pokemon-input">
       <input type="text" id="pokemonName" placeholder="Enter Pokemon name">
@@ -24,25 +24,35 @@
   </section>
 
 
+  <!--! LOADER  -->
+
+  <section class="loader-section">
+    <img src="loader/ripples.svg" alt="loader" class="loader hidden">
+  </section>
+
   <!--! POKEMON INFO SECTION  -->
   <section class="pokemon-in-pokedex" style="display:none">
 
     <div class="pokemon-img">
-      <img src="" alt="Pokemon Sprite" id="pokemonSprite" style="display:none">
+      <img src="" alt="Pokemon Sprite" id="pokemonSprite" style="display:none" onload="onPokemonLoad()">
     </div>
 
     <div class="pokemon-info">
-      <p class="category">Name: <span class="pokemon-name"></span></p>
-      <p class="category">ID: <span class="pokemon-id"></span></p>
-      <p class="category">Type: <span class="pokemon-type"></span></p>
-      <p class="category">Abilities: <span class="pokemon-abilities"></span></p>
-      <p class="category">Height: <span class="pokemon-height"></span></p>
-      <p class="category">Weight: <span class="pokemon-weight"></span></p>
+      <p class="category">Name: <br> <span class="pokemon-name"></span></p>
+      <p class="category">ID: <br> <span class="pokemon-id"></span></p>
+      <p class="category">Type: <br> <span class="pokemon-type"></span></p>
+      <p class="category">Abilities: <br> <span class="pokemon-abilities"></span></p>
+      <p class="category">Height: <br> <span class="pokemon-height"></span></p>
+      <p class="category">Weight: <br> <span class="pokemon-weight"></span></p>
 
     </div>
+  </section>
 
+  <section class="credit">
+    <p class="credit-text">Developed by Ori Halfon</p>
 
   </section>
+
 
 
 
