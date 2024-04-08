@@ -4,26 +4,10 @@ function getPokemon(pokemon) {
   axios.get(`https://pokeapi.co/api/v2/pokemon/${pokemon}`)
 
     .then(response => {
-      const elPokemonInPokedex = document.querySelector('.pokemon-in-pokedex')
       const elPokemonSprite = response.data.sprites.front_default
       const elImg = document.getElementById('pokemonSprite')
       elImg.src = elPokemonSprite
       elImg.style.display = 'block'
-    })
-    .catch(error => {
-
-      alert('There is no such Pokemon!')
-      const elLoader = document.querySelector('.loader')
-      elLoader.classList.add('hidden')
-
-
-    })
-}
-
-function getPokemonInfo(pokemon) {
-  axios.get(`https://pokeapi.co/api/v2/pokemon/${pokemon}`)
-
-    .then(response => {
 
       const elPokemonName = document.querySelector('.pokemon-name')
       const elPokemonId = document.querySelector('.pokemon-id')
@@ -40,6 +24,14 @@ function getPokemonInfo(pokemon) {
       elPokemonWeight.innerText = response.data.weight
 
 
+    })
+    .catch(error => {
+
+      alert('There is no such Pokemon!')
+      const elLoader = document.querySelector('.loader')
+      elLoader.classList.add('hidden')
+
 
     })
 }
+
