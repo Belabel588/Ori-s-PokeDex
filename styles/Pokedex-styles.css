@@ -60,15 +60,32 @@ h1 {
 
 ::placeholder {
   color: rgba(0, 0, 0, 0.686);
+  font-size: 0.7em;
 }
 
 input {
   margin: 0 auto;
+  border-radius: 100px;
+  width: 8.2em;
+  font-size: 1.2em;
 
 }
 
 button {
-  background-color: rgb(7, 190, 86);
+  background-color: rgba(7, 190, 86, 0.869);
+  color: rgb(240, 240, 240);
+  border-radius: 100px;
+  height: 3.2em;
+}
+
+button:hover {
+  transform: scale(1.1);
+  transition: 500ms;
+
+}
+
+.btn-pokeball-search {
+  width: 3em;
 }
 
 #pokemonSprite {
@@ -80,7 +97,7 @@ button {
   width: 9.1em;
 
   padding: 0.1em;
-  background-color: rgba(255, 255, 255, 0.846);
+  background-color: rgba(255, 255, 255, 0.944);
   border-radius: 40px;
   margin-inline-start: 7.4em;
 
