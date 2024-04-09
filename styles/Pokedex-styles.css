@@ -65,16 +65,16 @@ h1 {
 
 input {
   margin: 0 auto;
-  border-radius: 100px;
+  border-radius: 6.25em;
   width: 8.2em;
   font-size: 1.2em;
 
 }
 
 button {
-  background-color: rgba(7, 190, 86, 0.869);
+  background-color: rgb(7, 190, 86);
   color: rgb(240, 240, 240);
-  border-radius: 100px;
+  border-radius: 12.5em;
   height: 3.2em;
 }
 
