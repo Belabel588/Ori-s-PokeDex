@@ -37,7 +37,7 @@ function onRenderPokedex(response) {
   const elPokemonWeight = document.querySelector('.pokemon-weight')
 
   elPokemonName.innerText = response.name
-  elPokemonId.innerText = '#' + response.id
+  elPokemonId.innerText = '#' + response.order
   elPokemonType.innerText = response.types.map(type => type.type.name).join(', ')
   elPokemonAbilities.innerText = response.abilities.map(ability => ability.ability.name).join(', ')
   elPokemonHeight.innerText = response.height
