@@ -7,7 +7,10 @@ function onGetPokemon() {
 
   const pokemon = document.getElementById('pokemonName').value.toLowerCase()
   getPokemon(pokemon)
-  // getPokemonInfo(pokemon)
+    .then(response => {
+      onRenderPokedex(response)
+      // onPokemonLoad()
+    })
 }
 
 
@@ -21,7 +24,7 @@ function onPokemonLoad() {
 
 function onRenderPokedex(response) {
 
-  const elPokemonSprite = response.data.sprites.front_default
+  const elPokemonSprite = response.sprites.front_default
   const elImg = document.getElementById('pokemonSprite')
   elImg.src = elPokemonSprite
   elImg.style.display = 'block'
@@ -33,10 +36,10 @@ function onRenderPokedex(response) {
   const elPokemonHeight = document.querySelector('.pokemon-height')
   const elPokemonWeight = document.querySelector('.pokemon-weight')
 
-  elPokemonName.innerText = response.data.name
-  elPokemonId.innerText = '#' + response.data.id
-  elPokemonType.innerText = response.data.types.map(type => type.type.name).join(', ')
-  elPokemonAbilities.innerText = response.data.abilities.map(ability => ability.ability.name).join(', ')
-  elPokemonHeight.innerText = response.data.height
-  elPokemonWeight.innerText = response.data.weight
+  elPokemonName.innerText = response.name
+  elPokemonId.innerText = '#' + response.id
+  elPokemonType.innerText = response.types.map(type => type.type.name).join(', ')
+  elPokemonAbilities.innerText = response.abilities.map(ability => ability.ability.name).join(', ')
+  elPokemonHeight.innerText = response.height
+  elPokemonWeight.innerText = response.weight
 }
